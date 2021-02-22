@@ -1,0 +1,28 @@
+﻿@model StoredProcedureDemo.Models.sp_find_branch_Result
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+
+                <tr><td>Branch ID</td><td>@Html.TextBoxFor(a => a.BranchId)</td></tr>
+                <tr><td>Branch Name</td><td>@Html.TextBoxFor(a => a.BranchName)</td></tr>
+                <tr><td></td><td><input type="submit" name="btnsubmit" value="Update" /></td></tr>
+
+            </table>
+
+        }
+    </div>
+</body>
+</html>
